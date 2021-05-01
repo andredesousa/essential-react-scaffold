@@ -1,6 +1,7 @@
 # Essential React Scaffold
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) version 4 and [Node.js](https://nodejs.org/en/about/releases) version 12.
+It has a complete development environment configured, including build, test, and deploy scripts as examples.
 
 ## Table of Contents
 
@@ -21,7 +22,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 When working in a large team with many developers that are responsible for the same codebase, having a common understanding of how the application should be structured is vital.
 Based on best practices from the community, [React Folder Structure](https://create-react-app.dev/docs/folder-structure), other github React projects and developer experience, your project should look like this:
 
-```bash
+```html
 ├── ci
 ├── e2e
 |  ├── page-objects
@@ -81,7 +82,7 @@ The page will reload if you make edits.
 Use `npm run lint` to analyze your code. It includes, `ESLint`, `Prettier` and `stylelint`.
 Many problems can be automatically fixed with `npm run lint:fix`.
 
-Depending on our editor, you may want to add an editor extension to lint and format our code while we type or on-save.
+Depending on your editor, you may want to add an editor extension to lint and format your code while we type or on-save.
 To ensure all files committed to git don't have any TypeScript, linting, or formatting errors, there is a tool called [lint-staged](https://www.npmjs.com/package/lint-staged) that can be used.
 When lint-staged is used in combination with [husky](https://www.npmjs.com/package/husky), the linting commands specified with lint-staged can be executed to staged files on pre-commit.
 
@@ -120,6 +121,10 @@ This project has the [Lighthouse](https://github.com/GoogleChrome/lighthouse) co
 Lighthouse is an open-source, automated tool for improving the quality of web pages.
 It has audits for performance, accessibility, progressive web apps, SEO and more.
 
+Web performance is possibly one of the most important parts to take into account for a modern web application.
+This project has [Webpack Bundle Analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer) to help visualize where code in the final bundle comes from.
+You can see the bundle statistics running the analyzer with the `npm run analyze` command.
+
 ## Commit messages convention
 
 In order to have a consistent git history every commit must follow a specific template. Here's the template:
@@ -133,7 +138,7 @@ In order to have a consistent git history every commit must follow a specific te
 Must be one of the following:
 
 - **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
-- **ci**: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, Jenkins, SauceLabs)
+- **ci**: Changes to your CI configuration files and scripts (example scopes: Travis, Circle, Jenkins, SauceLabs)
 - **chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation
 - **docs**: Documentation only changes
 - **feat**: A new feature
